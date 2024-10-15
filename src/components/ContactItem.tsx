@@ -1,11 +1,6 @@
-import { User } from "../schemas/userSchema";
 import magnifierIcon from "../assets/icon-supervisor.svg";
 import { twMerge } from "tailwind-merge";
-
-type ContactItemProps = {
-  user: User;
-  openModal: (user: User) => void;
-};
+import type { ContactItemProps } from "../types";
 
 export const ContactItem = ({ user, openModal }: ContactItemProps) => {
   return (

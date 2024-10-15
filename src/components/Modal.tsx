@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
-import { User } from "../schemas/userSchema";
 import { ModalInfoItem } from "./ModalInfoItem";
 import { twMerge } from "tailwind-merge";
-
-type ModalProps = {
-  user: User;
-  closeModal: () => void;
-};
+import type { ModalProps } from "../types";
 
 export const Modal = ({ user, closeModal }: ModalProps) => {
   const [isVisible, setIsVisible] = useState(false);
