@@ -14,3 +14,8 @@ export type modalInfoProps = {
   infos: string[];
   label: string;
 };
+
+export type ContactInfoItemProps = {
+  label: string;
+  value: string;
+};

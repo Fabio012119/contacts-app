@@ -1,6 +1,7 @@
 import magnifierIcon from "../assets/icon-supervisor.svg";
 import { twMerge } from "tailwind-merge";
 import type { ContactItemProps } from "../types";
+import { ContactInfoItem } from "./ContactInfoItem";
 
 export const ContactItem = ({ user, openModal }: ContactItemProps) => {
   return (
@@ -14,18 +15,8 @@ export const ContactItem = ({ user, openModal }: ContactItemProps) => {
       <h2 className="font-bold text-neutral-very-dark-blue text-xl mb-[1rem] smMax:text-left">
         {user.name}
       </h2>
-      <p className="text-neutral-grayish-blue smMax:text-left">
-        Company:{" "}
-        <span className="font-bold text-neutral-grayish-blue">
-          {user.company.name}
-        </span>
-      </p>
-      <p className="text-neutral-grayish-blue smMax:text-left">
-        E-mail:{" "}
-        <span className="font-bold text-neutral-grayish-blue">
-          {user.email}
-        </span>
-      </p>
+      <ContactInfoItem label="Company:" value={user.company.name} />
+      <ContactInfoItem label="E-mail:" value={user.email} />
       <img
         src={magnifierIcon}
         alt="magnifier"
