@@ -50,14 +50,22 @@ export const Main = () => {
         "smMax:flex-col gap-6 lgMax:w-full lgMin:px-[15%]"
       )}
     >
-      {error ? <p className="text-red-600 text-center">Error: {error}</p> : ""}
+      {error ? (
+        <p className="text-red-600 text-center">Error: {error}</p>
+      ) : (
+        <>
+          {users.map((user) => (
+            <ContactItem
+              key={user.id}
+              user={user}
+              openModal={handleOpenModal}
+            />
+          ))}
 
-      {users.map((user) => (
-        <ContactItem key={user.id} user={user} openModal={handleOpenModal} />
-      ))}
-
-      {selectedUser && (
-        <Modal user={selectedUser} closeModal={handleCloseModal} />
+          {selectedUser && (
+            <Modal user={selectedUser} closeModal={handleCloseModal} />
+          )}
+        </>
       )}
     </div>
   );
