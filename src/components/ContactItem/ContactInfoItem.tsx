@@ -1,4 +1,4 @@
-import type { ContactInfoItemProps } from "../types";
+import type { ContactInfoItemProps } from "../../types";
 
 export const ContactInfoItem = ({ label, value }: ContactInfoItemProps) => {
   return (
