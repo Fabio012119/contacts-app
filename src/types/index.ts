@@ -19,3 +19,8 @@ export type ContactInfoItemProps = {
   label: string;
   value: string;
 };
+
+export type modalAnimationClassProps = {
+  isVisible: boolean;
+  isClosing: boolean;
+};

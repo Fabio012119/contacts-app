@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
-import { userSchema, User } from "../schemas/userSchema";
+import { User } from "../schemas/userSchema";
 import { ContactItem } from "./ContactItem";
 import { twMerge } from "tailwind-merge";
 import { Modal } from "./Modal";
+import { fetchUsers } from "../helpers/Main";
 
 export const Main = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -10,24 +11,7 @@ export const Main = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/users?_start=0&_limit=6"
-        );
-        if (!response.ok) throw new Error("Failed to fetch users");
-
-        const data = await response.json();
-
-        const parsedData = data.map((user: User) => userSchema.parse(user));
-        setUsers(parsedData);
-      } catch (err) {
-        setError((err as Error).message);
-        console.error(err);
-      }
-    };
-
-    fetchUsers();
+    fetchUsers({ setUsers, setError });
   }, []);
 
   const handleOpenModal = useCallback((user: User) => {

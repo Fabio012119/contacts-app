@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ModalInfoItem } from "./ModalInfoItem";
 import { twMerge } from "tailwind-merge";
+import { animationClass } from "../helpers/Modal";
 import type { ModalProps } from "../types";
 
 export const Modal = ({ user, closeModal }: ModalProps) => {
@@ -18,13 +19,7 @@ export const Modal = ({ user, closeModal }: ModalProps) => {
     }, 500);
   };
 
-  const animationClass = `${
-    isVisible && !isClosing
-      ? "translate-y-0 opacity-100"
-      : isClosing
-      ? "-translate-y-full opacity-0"
-      : "translate-y-full opacity-0"
-  }`;
+  const modalAnimationClass = animationClass({ isVisible, isClosing });
 
   return (
     <div
@@ -36,7 +31,7 @@ export const Modal = ({ user, closeModal }: ModalProps) => {
           className={twMerge(
             "bg-white fixed p-8 shadow-lg w-6/12 smMax:w-[90%] border-b-4 top-[4rem]",
             "border-b-primary-cyan transform transition-all duration-500 ease-in-out",
-            animationClass
+            modalAnimationClass
           )}
           onClick={(e) => e.stopPropagation()}
         >
