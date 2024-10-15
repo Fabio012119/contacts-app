@@ -13,7 +13,7 @@ export const ContactItem = ({ user, openModal }: ContactItemProps) => {
       className={twMerge(
         "bg-white rounded-lg shadow-lg hover:shadow-2xl hover:translate-y-[-5%]",
         "transition-transform border-primary-cyan border-t-2",
-        "smMin:w-[50%] lgMin:w-[100%] p-[2rem] flex flex-col w-[90%]"
+        "smMin:w-[70%] lgMin:w-[100%] p-[2rem] flex flex-col w-[90%]"
       )}
     >
       <h2 className="font-bold text-neutral-very-dark-blue text-xl mb-[1rem] smMax:text-left">
