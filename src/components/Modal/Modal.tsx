@@ -23,6 +23,7 @@ export const Modal = ({ user, closeModal }: ModalProps) => {
 
   return (
     <div
+      role="dialog"
       className="fixed inset-0 bg-black bg-opacity-50 z-50"
       onClick={handleClose}
     >

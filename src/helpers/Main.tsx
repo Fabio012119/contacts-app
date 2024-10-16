@@ -1,6 +1,6 @@
 import { userSchema, User } from "schemas/userSchema";
 
-type FetchUserProps = {
+export type FetchUserProps = {
   setUsers: (users: User[]) => void;
   setError: (error: string) => void;
 };
@@ -18,7 +18,7 @@ export const fetchUsers = async ({
 
     const data = await response.json();
 
-    const parsedData = data.map((user: unknown) => userSchema.parse(user));
+    const parsedData = data.map((user: User) => userSchema.parse(user));
     setUsers(parsedData);
   } catch (err) {
     const errorMessage = (err as Error).message || "An error occurred";

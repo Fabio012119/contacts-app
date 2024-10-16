@@ -18,6 +18,7 @@
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["components/*"],
+      "@__tests__/*": ["__tests__/*"],
       "@assets/*": ["assets/*"],
       "@schemas/*": ["schemas/*"],
       "@types/*": ["types/*"],
