@@ -6,7 +6,7 @@ describe("Headers component", () => {
         render(<Headers />);
     
 
-    //check it renders the correct texts
+    //Check it renders the correct texts
     expect(screen.getByText(/CSS, Javascript, API/i)).toBeInTheDocument();
     expect(screen.getByText(/Contacts Application/i)).toBeInTheDocument();
     expect(

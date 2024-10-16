@@ -24,3 +24,8 @@ export type modalAnimationClassProps = {
   isVisible: boolean;
   isClosing: boolean;
 };
+
+export type FetchUserProps = {
+  setUsers: (users: User[]) => void;
+  setError: (error: string) => void;
+};

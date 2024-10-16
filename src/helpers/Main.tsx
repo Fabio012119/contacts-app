@@ -1,9 +1,5 @@
 import { userSchema, User } from "schemas/userSchema";
-
-export type FetchUserProps = {
-  setUsers: (users: User[]) => void;
-  setError: (error: string) => void;
-};
+import type { FetchUserProps } from "types";
 
 export const fetchUsers = async ({
   setUsers,

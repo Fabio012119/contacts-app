@@ -9,7 +9,7 @@ test('displays the correct label and value', () => {
 
   render(<ContactInfoItem {...props} />);
 
-  //check component displays label and value
+  //Check component displays label and value
   const labelElement = screen.getByText(/Email:/i);
   const valueElement = screen.getByText(/example@example.com/i);
 
