@@ -2,6 +2,12 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { Main } from "../components/Main";
 import * as fetchUsersHelper from "../helpers/Main";
 
+/**
+ * You can go to the fetchUsers function in the helpers directory
+ * and simulate an error in the endpoint by changing the strings of the url,
+ * then you will see the test fails.
+ */
+
 describe("Main component with real data", () => {
   test("fetches and renders users", async () => {
     render(<Main />);
