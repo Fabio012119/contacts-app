@@ -30,7 +30,7 @@ export const Modal = ({ user, closeModal }: ModalProps) => {
       <div className="fixed inset-0 flex justify-center items-center">
         <div
           className={twMerge(
-            "bg-white fixed p-8 shadow-lg w-6/12 smMax:w-[90%] border-b-4 top-[4rem]",
+            "bg-white fixed p-8 shadow-lg smMax:w-[90%] smMin:w-[90%] lgMin:w-6/12 border-b-4 top-[4rem]",
             "border-b-primary-cyan transform transition-all duration-500 ease-in-out",
             modalAnimationClass
           )}
