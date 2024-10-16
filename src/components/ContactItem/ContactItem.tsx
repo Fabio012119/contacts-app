@@ -1,6 +1,6 @@
-import magnifierIcon from "../../assets/icon-supervisor.svg";
+import magnifierIcon from "assets/icon-supervisor.svg";
 import { twMerge } from "tailwind-merge";
-import type { ContactItemProps } from "../../types";
+import type { ContactItemProps } from "types";
 import { ContactInfoItem } from "./ContactInfoItem";
 
 export const ContactItem = ({ user, openModal }: ContactItemProps) => {

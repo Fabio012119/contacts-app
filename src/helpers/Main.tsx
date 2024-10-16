@@ -1,4 +1,4 @@
-import { userSchema, User } from "../schemas/userSchema";
+import { userSchema, User } from "schemas/userSchema";
 
 type FetchUserProps = {
   setUsers: (users: User[]) => void;

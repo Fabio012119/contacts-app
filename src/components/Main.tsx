@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
-import { User } from "../schemas/userSchema";
+import { User } from "schemas/userSchema";
 import { ContactItem } from "./ContactItem/ContactItem";
 import { twMerge } from "tailwind-merge";
 import { Modal } from "./Modal/Modal";
-import { fetchUsers } from "../helpers/Main";
+import { fetchUsers } from "helpers/Main";
 
 export const Main = () => {
   const [users, setUsers] = useState<User[]>([]);

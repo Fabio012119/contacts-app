@@ -1,4 +1,4 @@
-import type { modalInfoProps } from "../../types";
+import type { modalInfoProps } from "types";
 
 export const ModalInfoItem = ({ infos, label }: modalInfoProps) => {
   return (
