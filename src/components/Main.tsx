@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { User } from "schemas/userSchema";
 import { ContactItem } from "./ContactItem/ContactItem";
 import { twMerge } from "tailwind-merge";
@@ -14,32 +14,13 @@ export const Main = () => {
     fetchUsers({ setUsers, setError });
   }, []);
 
-  const handleOpenModal = useCallback((user: User) => {
+  const handleOpenModal = (user: User) => {
     setSelectedUser(user);
-  }, []);
+  };
 
-  const handleCloseModal = useCallback(() => {
+  const handleCloseModal = () => {
     setSelectedUser(null);
-  }, []);
-
-  // Handle modal accessibility (e.g., close on "Escape" key press)
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        handleCloseModal();
-      }
-    };
-
-    if (selectedUser) {
-      document.addEventListener("keydown", handleKeyDown);
-    } else {
-      document.removeEventListener("keydown", handleKeyDown);
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [selectedUser, handleCloseModal]);
+  };
 
   return (
     <div
