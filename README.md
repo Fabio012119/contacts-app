@@ -58,3 +58,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 1. tailwindcss: For styling (https://www.npmjs.com/package/tailwindcss)
 2. tailwind-merge: This package helps you merge tailwind classes so that your IDE doesn't have long classNames attributes (https://www.npmjs.com/package/tailwind-merge)
 3. zod: This package is used to define schemas in your TS app and infer them (https://www.npmjs.com/package/zod)
+4. jest: This package is used for writing unit tests (https://www.npmjs.com/package/jest)
