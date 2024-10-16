@@ -7,8 +7,8 @@ export const ContactItem = ({ user, openModal }: ContactItemProps) => {
   return (
     <div
       className={twMerge(
-        "bg-white rounded-lg shadow-lg hover:shadow-2xl hover:translate-y-[-5%]",
-        "transition-transform border-primary-cyan border-t-2",
+        "bg-white rounded-lg shadow-2xl hover:translate-y-[-5%]",
+        "transition-transform border-primary-cyan border-t-[0.2rem]",
         "smMin:w-[70%] lgMin:w-[100%] p-[2rem] flex flex-col w-[90%]"
       )}
     >

@@ -43,25 +43,27 @@ export const Modal = ({ user, closeModal }: ModalProps) => {
           </button>
 
           <div className="mb-6 lgMax:text-start">
-            <h2 className="text-2xl font-bold text-neutral-very-dark-blue ">
+            <h2 className="text-2xl font-bold text-neutral-very-dark-blue">
               {user.name}
             </h2>
             <p className="text-neutral-grayish-blue">{user.company.name}</p>
           </div>
 
-          <div className="flex flex-row justify-between lgMax:flex-col lgMax:items-start lgMax:text-start lgMax:gap-2">
-            <ModalInfoItem infos={[user.username]} label="Username:" />
+          <div className="flex flex-row p-4 justify-between lgMax:flex-col lgMax:items-start lgMax:text-start lgMax:gap-2">
+            <ModalInfoItem label="Username:" infos={[user.username]} />
             <ModalInfoItem
+              label="Address:"
               infos={[
                 user.address.street,
                 user.address.city,
                 user.address.suite,
               ]}
-              label="Address:"
             />
-            <ModalInfoItem infos={[user.phone]} label="Phone:" />
-            <ModalInfoItem infos={[user.email]} label="Email:" />
-            <ModalInfoItem infos={[user.website]} label="Website:" />
+            <ModalInfoItem label="Phone:" infos={[user.phone]} />
+            <div className="lgMax:[&>div]:mb-2">
+              <ModalInfoItem label="Email:" infos={[user.email]} />
+              <ModalInfoItem label="Website:" infos={[user.website]} />
+            </div>
           </div>
         </div>
       </div>
