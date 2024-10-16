@@ -45,9 +45,9 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### speedcast-contacts-app
+# speedcast-contacts-app
 
-# Packages used
+### Packages used
 
 1. tailwindcss: For styling (https://www.npmjs.com/package/tailwindcss)
 2. tailwind-merge: This package helps you merge tailwind classes so that your IDE doesn't have long classNames attributes (https://www.npmjs.com/package/tailwind-merge)
